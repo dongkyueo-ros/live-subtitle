@@ -113,6 +113,22 @@ run.bat
 
 ## 🛠 수동 실행 (bat 파일 없이)
 
+bash
+```bash
+# 가상환경 생성
+python -m venv .venv
+
+# 가상환경 활성화
+source .venv/Scripts/activate
+
+# 패키지 설치
+pip install -r requirements.txt
+
+# 실행
+python auto_subtitle.py
+```
+
+cmd
 ```bash
 # 가상환경 활성화
 .venv\Scripts\activate

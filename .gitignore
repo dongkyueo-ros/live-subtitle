@@ -8,3 +8,6 @@ venv/
 # Python 캐시
 __pycache__/
 *.pyc
+
+# logs
+logs/
