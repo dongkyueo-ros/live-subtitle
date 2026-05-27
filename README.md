@@ -239,7 +239,7 @@ MIT License - 자유롭게 사용, 수정, 배포 가능합니다.
    ```
 3. 변경사항 커밋
    ```bash
-   git commit -m "feat: 기능 설명"
+   git commit -m "[feat] 기능 설명"
    ```
 4. Push 후 Pull Request 생성
    ```bash
@@ -259,6 +259,5 @@ MIT License - 자유롭게 사용, 수정, 배포 가능합니다.
 ### 이런 기여를 기다립니다
 
 - 번역 품질 개선 아이디어
-- 다른 언어 지원 (일본어, 중국어 등)
 - 자막 UI 개선
 - macOS / Linux 지원
