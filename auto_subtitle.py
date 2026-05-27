@@ -400,9 +400,6 @@ class SubtitleOverlay:
         self._ko_label.configure(wraplength=wrap)
 
 
-
-
-
 # ── 진입점 ────────────────────────────────────────────────
 
 def main() -> None:
