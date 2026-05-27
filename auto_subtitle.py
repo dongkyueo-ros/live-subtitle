@@ -400,6 +400,9 @@ class SubtitleOverlay:
         self._ko_label.configure(wraplength=wrap)
 
 
+
+
+
 # ── 진입점 ────────────────────────────────────────────────
 
 def main() -> None:
@@ -418,9 +421,13 @@ def main() -> None:
     sample_rate = int(os.getenv("SAMPLE_RATE") or device_info["default_samplerate"])
     print(f"[설정] 샘플레이트: {sample_rate}Hz / 채널: {CHANNELS} / 무음 임계값: {SILENCE_THRESHOLD}")
 
+    def on_close():
+        capture.stop()
+        worker.stop()
+
     logger  = TranscriptLogger()
     capture = AudioCapture(device_idx=device_idx, chunk_seconds=CHUNK_SECONDS, sample_rate=sample_rate)
-    overlay = SubtitleOverlay(on_close=lambda: (capture.stop(), worker.stop()))
+    overlay = SubtitleOverlay(on_close=on_close)
     worker  = TranscribeWorker(
         audio_queue=capture.queue,
         groq_client=groq_client,
